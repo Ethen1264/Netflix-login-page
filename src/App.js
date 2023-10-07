@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GlobalStyle from './GlobalStyle';
-import * as Style from './Style';
+import * as S from './Style';
 
 function App() {
   const [state, setState] = useState(0);
@@ -9,11 +9,14 @@ function App() {
   };
   return (
     <>
+      {/* web css 초기화 */}
       <GlobalStyle />
-      <Style.Container>
-        <Style.NetflixBackgourndImg>
-          <Style.Header>
-            <Style.Logo>
+      {/* 배경 설정 */}
+      <S.Container>
+        <S.NetflixBackgourndImg>
+          {/* 헤더 설정 */}
+          <S.Header>
+            <S.Logo>
               <a href="/" class="logo">
                 <svg viewBox="0 0 111 30" data-uia="netflix-logo" class="svg-icon svg-icon-netflix-logo" aria-hidden="true" focusable="false">
                   <g id="netflix-logo">
@@ -24,12 +27,17 @@ function App() {
                   </g>
                 </svg>
               </a>
-            </Style.Logo>
-          </Style.Header>
+            </S.Logo>
+          </S.Header>
+          {/* 로그인 컨테이너 */}
+          <S.BackgorundLoginContainer>
+            <S.BackgorundLogin></S.BackgorundLogin>
+          </S.BackgorundLoginContainer>
 
-          
-        </Style.NetflixBackgourndImg>
-      </Style.Container>
+          {/* footer */}
+          <S.FooterContainer></S.FooterContainer>
+        </S.NetflixBackgourndImg>
+      </S.Container>
     </>
   );
 }
