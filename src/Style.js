@@ -5,7 +5,6 @@ export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  z-index: -1;
   position: relative;
 `;
 export const NetflixBackgourndImg = styled.div`
@@ -50,30 +49,87 @@ export const BackgorundLogin = styled.div`
   position: relative;
 
   h1 {
-  color: #fff;
-  font-size: 32px;
-  font-weight: 500;
-  margin-bottom: 28px;
-  position: absolute; 
-  top: 40px;
-  left: 68px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    position: absolute;
+    top: 40px;
+    left: 68px;
   }
 `;
 export const EmailInputContainer = styled.div`
-  background:#333;
+  background: #333;
   height: 50px;
-  width: 300px;
+  width: 315px;
   border-radius: 4px;
   border: 0;
   position: absolute;
-  left: 50px;  
-  font-size:16px;
+  left: 68px;
+  top: 132px;
 
-  input{ 
+  input {
+    width: 270px;
+    border: 0;
+    background: #333;
+    font-size: 16px;
+    left: 19px;
+    top: 15px;
     z-index: 99;
     position: absolute;
+    color: #8c8c8c;
   }
-`
+  input:focus {
+    outline: none;
+    color: #fff;
+  }
+`;
+export const PasswordInputContainer = styled.div`
+  background: #333;
+  height: 50px;
+  width: 315px;
+  border-radius: 4px;
+  border: 0;
+  position: absolute;
+  left: 68px;
+  top: 220px;
+
+  input {
+    width: 240px;
+    border: 0;
+    background: #333;
+    font-size: 16px;
+    left: 19px;
+    top: 15px;
+    z-index: 99;
+    position: absolute;
+    color: #8c8c8c;
+  }
+  input:focus {
+    outline: none;
+    color: #fff;
+  }
+  p {
+    top: 3px;
+    color: #8c8c8c;
+    position: absolute;
+    font-size: 14px;
+    left: 275px;
+  }
+`;
+export const LoginButton = styled.button`
+  position: absolute;
+  top: 30px;
+  background-color: #e50914;
+  padding: 13px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  top: 335px;
+  left: 68px;
+  width: 315px;
+`;
 
 // footer
 export const FooterContainer = styled.div`

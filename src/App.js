@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import GlobalStyle from './GlobalStyle';
 import * as S from './Style';
-
 function App() {
   const [state, setState] = useState(0);
   const buttonClick = () => {
@@ -26,7 +25,7 @@ function App() {
                     ></path>
                   </g>
                 </svg>
-          0    </a>
+              </a>
             </S.Logo>
           </S.Header>
           {/* 로그인 컨테이너 */}
@@ -34,13 +33,20 @@ function App() {
             <S.BackgorundLogin>
               <h1>로그인</h1>
               <S.EmailInputContainer>
-                <input placeholder='hi'></input>
+                <input placeholder="이메일 주소 또는 전화번호"></input>
               </S.EmailInputContainer>
+              <S.PasswordInputContainer>
+                <input placeholder="비밀번호" type='password'/>
+                <p>표시</p>
+              </S.PasswordInputContainer>
+              <S.LoginButton>
+                로그인
+              </S.LoginButton>
             </S.BackgorundLogin>
           </S.BackgorundLoginContainer>
 
           {/* footer */}
-          <S.FooterContainer></S.FooterContainer> 
+          <S.FooterContainer></S.FooterContainer>
         </S.NetflixBackgourndImg>
       </S.Container>
     </>
