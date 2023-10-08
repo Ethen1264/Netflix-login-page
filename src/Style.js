@@ -47,7 +47,33 @@ export const BackgorundLogin = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 660px;
+  position: relative;
+
+  h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  position: absolute; 
+  top: 40px;
+  left: 68px;
+  }
 `;
+export const EmailInputContainer = styled.div`
+  background:#333;
+  height: 50px;
+  width: 300px;
+  border-radius: 4px;
+  border: 0;
+  position: absolute;
+  left: 50px;  
+  font-size:16px;
+
+  input{ 
+    z-index: 99;
+    position: absolute;
+  }
+`
 
 // footer
 export const FooterContainer = styled.div`

@@ -26,16 +26,21 @@ function App() {
                     ></path>
                   </g>
                 </svg>
-              </a>
+          0    </a>
             </S.Logo>
           </S.Header>
           {/* 로그인 컨테이너 */}
           <S.BackgorundLoginContainer>
-            <S.BackgorundLogin></S.BackgorundLogin>
+            <S.BackgorundLogin>
+              <h1>로그인</h1>
+              <S.EmailInputContainer>
+                <input placeholder='hi'></input>
+              </S.EmailInputContainer>
+            </S.BackgorundLogin>
           </S.BackgorundLoginContainer>
 
           {/* footer */}
-          <S.FooterContainer></S.FooterContainer>
+          <S.FooterContainer></S.FooterContainer> 
         </S.NetflixBackgourndImg>
       </S.Container>
     </>
