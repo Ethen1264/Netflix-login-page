@@ -42,6 +42,19 @@ function App() {
               <S.LoginButton>
                 로그인
               </S.LoginButton>
+              <S.LoginCheckBoxContainer>
+                <input type='checkbox'/>
+                <span>로그인 정보 저장</span>
+                <a>도움이 필요하신가요?</a>
+              </S.LoginCheckBoxContainer>
+              <S.SigninContainer>
+                <span>Netflix 회원이 아닌가요?</span>
+                <a>지금 가입하세요.</a>
+              </S.SigninContainer>
+              <S.Copyright>
+                <span>이 페이지는 Google reCAPTCHA의 보호를 받아<br/>사용자가 로봇이 아님을 확인합니다.</span>
+                <a>자세히 알아보기.</a>
+              </S.Copyright>
             </S.BackgorundLogin>
           </S.BackgorundLoginContainer>
 

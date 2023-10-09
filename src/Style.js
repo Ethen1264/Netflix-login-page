@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -130,6 +131,90 @@ export const LoginButton = styled.button`
   left: 68px;
   width: 315px;
 `;
+export const LoginCheckBoxContainer = styled.div`
+position:absolute;
+left:65px;
+top: 395px;
+width:320px;
+height:25px;
+
+a{
+  position:absolute;
+  top:3px;
+  right:2px;
+  cursor:pointer;
+  color:#b3b3b3;
+  font-size:13px;
+  &:hover{
+    text-decoration : underline
+  }
+}
+span{
+  position:absolute;
+  top: 3px;
+  color:#b3b3b3;
+  font-size:13px;
+}
+input{
+  appearance: none;
+  border: 0;
+  border-radius: 2px;
+  width: 15px;
+  height: 16px;
+  background-color: #737373;
+  border:none;
+
+  &:checked {
+    border-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='000' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    background-size: 150% 150%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+`
+export const SigninContainer = styled.div`
+position:absolute;
+left:68px;
+top: 453px;
+width:320px;
+height:25px;
+span{
+  color:#737373;
+}
+a{
+  position:absolute;
+  color:#fff;
+  cursor:pointer;
+  right: 17px;
+  &:hover{
+    text-decoration : underline
+  }
+}
+`
+export const Copyright = styled.div`
+position:absolute;
+left:68px;
+top: 485px;
+width:320px;
+height:50px;
+span{
+  font-size:13px;
+  color:#8c8c8c;
+  line-height: 3%;
+}
+a{
+  position:absolute;
+  right:5px;
+  top: 24px;
+  color:#0071eb;
+  font-size:13px;
+  cursor:pointer;
+  &:hover{
+    text-decoration : underline
+  }
+}
+`
 
 // footer
 export const FooterContainer = styled.div`
