@@ -59,7 +59,22 @@ function App() {
           </S.BackgorundLoginContainer>
 
           {/* footer */}
-          <S.FooterContainer></S.FooterContainer>
+          <S.FooterContainer>
+            <S.FooterServeContainer>
+              <S.FirstItem>
+                <p className='question'>질문이 있으신가요? 문의 전화: </p>
+                <a className='number'>080-001-9587</a>
+              </S.FirstItem>
+              <S.SecondItem>
+                <a className='first'>자주 묻는 질문</a>
+                <a className='second'>고객 샌터</a>
+                <a className='third'>이용 약관</a>
+                <a className='fourth'>개인정보 처리방침</a>
+                <a className='fifth'>쿠키 설정</a>
+                <a className='sixth'>회사 정보</a>
+              </S.SecondItem>
+            </S.FooterServeContainer>
+          </S.FooterContainer>
         </S.NetflixBackgourndImg>
       </S.Container>
     </>

@@ -218,8 +218,56 @@ a{
 
 // footer
 export const FooterContainer = styled.div`
+  position:relative;
   margin-top: 45px;
   background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
   height: 413px;
 `;
+export const FooterServeContainer = styled.div`
+  position:relative;
+  width: 1000px;
+  height: 413px;
+  margin:0 auto;
+    // background-color: red;
+`
+export const FirstItem = styled.div`
+  position: relative;
+  width:1000px;
+  height:70px;
+  display:flex;
+  // background-color: white;
+  margin-bottom: 10px;
+  .question{
+    color: #737373;
+    position:absolute;
+    top:15px;
+  }
+  .number{
+    left:230px;
+    top:30px;
+    position:absolute;
+    color: #737373;
+    cursor:pointer;
+    &:hover{
+      text-decoration : underline
+    }
+  }
+`
+export const SecondItem = styled.div`
+  // background-color: red;
+  width: 900px;
+  height:100px;
+  a{
+    display: inline-block;
+    width:25%;
+    margin-bottom: 16px;
+    padding: 0 22px 0 0;
+    font-size:13px;
+    color: #757575;
+    cursor:pointer;
+    &:hover{
+      text-decoration : underline
+    }
+  }
+`
