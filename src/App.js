@@ -71,7 +71,7 @@ function App() {
               </S.FirstItem>
               <S.SecondItem>
                 <a className="first">자주 묻는 질문</a>
-                <a className="second">고객 샌터</a>
+                <a className="second">고객 센터</a>
                 <a className="third">이용 약관</a>
                 <a className="fourth">개인정보 처리방침</a>
                 <a className="fifth">쿠키 설정</a>
