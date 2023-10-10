@@ -34,16 +34,16 @@ function App() {
               <h1>로그인</h1>
               <S.EmailInputContainer>
                 <input placeholder="이메일 주소 또는 전화번호"></input>
+                <div>정확한 이메일 주소나 전화번호를 입력하세요.</div>
               </S.EmailInputContainer>
               <S.PasswordInputContainer>
-                <input placeholder="비밀번호" type='password'/>
+                <input placeholder="비밀번호" type="password" />
                 <p>표시</p>
+                <div>비밀번호는 4~60자 사이여야 합니다.</div>
               </S.PasswordInputContainer>
-              <S.LoginButton>
-                로그인
-              </S.LoginButton>
+              <S.LoginButton>로그인</S.LoginButton>
               <S.LoginCheckBoxContainer>
-                <input type='checkbox'/>
+                <input type="checkbox" />
                 <span>로그인 정보 저장</span>
                 <a>도움이 필요하신가요?</a>
               </S.LoginCheckBoxContainer>
@@ -52,7 +52,11 @@ function App() {
                 <a>지금 가입하세요.</a>
               </S.SigninContainer>
               <S.Copyright>
-                <span>이 페이지는 Google reCAPTCHA의 보호를 받아<br/>사용자가 로봇이 아님을 확인합니다.</span>
+                <span>
+                  이 페이지는 Google reCAPTCHA의 보호를 받아
+                  <br />
+                  사용자가 로봇이 아님을 확인합니다.
+                </span>
                 <a>자세히 알아보기.</a>
               </S.Copyright>
             </S.BackgorundLogin>
@@ -62,17 +66,35 @@ function App() {
           <S.FooterContainer>
             <S.FooterServeContainer>
               <S.FirstItem>
-                <p className='question'>질문이 있으신가요? 문의 전화: </p>
-                <a className='number'>080-001-9587</a>
+                <p className="question">질문이 있으신가요? 문의 전화: </p>
+                <a className="number">080-001-9587</a>
               </S.FirstItem>
               <S.SecondItem>
-                <a className='first'>자주 묻는 질문</a>
-                <a className='second'>고객 샌터</a>
-                <a className='third'>이용 약관</a>
-                <a className='fourth'>개인정보 처리방침</a>
-                <a className='fifth'>쿠키 설정</a>
-                <a className='sixth'>회사 정보</a>
+                <a className="first">자주 묻는 질문</a>
+                <a className="second">고객 샌터</a>
+                <a className="third">이용 약관</a>
+                <a className="fourth">개인정보 처리방침</a>
+                <a className="fifth">쿠키 설정</a>
+                <a className="sixth">회사 정보</a>
               </S.SecondItem>
+              <S.ThirdItem>
+                <select>
+                  <option>한국어</option>
+                  <option>English</option>
+                </select>
+              </S.ThirdItem>
+              <S.fourthItem>
+              <div class="copy-text-block">넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div>
+                <div class="copy-text-block">대표: 레지널드 숀 톰프슨</div>
+                <div class="copy-text-block">이메일 주소: korea@netflix.com</div>
+                <div class="copy-text-block">주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div>
+                <div class="copy-text-block">이메일 주소: korea@netflix.com</div>
+                <div class="copy-text-block">사업자등록번호: 165-87-00119</div>
+                <div class="copy-text-block">클라우드 호스팅: Amazon Web Services Inc.</div>
+                <div class="copy-text-block">
+                  <a class="copy-text-block" href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">공정거래위원회 웹사이트</a>
+                </div>
+              </S.fourthItem>
             </S.FooterServeContainer>
           </S.FooterContainer>
         </S.NetflixBackgourndImg>

@@ -84,6 +84,13 @@ export const EmailInputContainer = styled.div`
     outline: none;
     color: #fff;
   }
+  div{
+    position:absolute;
+    left:3px;
+    top: 55px;
+    color: rgb(232, 124, 3);
+    font-size:13px; 
+  }
 `;
 export const PasswordInputContainer = styled.div`
   background: #333;
@@ -116,6 +123,13 @@ export const PasswordInputContainer = styled.div`
     position: absolute;
     font-size: 14px;
     left: 275px;
+  }
+  div{
+    position:absolute;
+    left:3px;
+    top: 55px;
+    color: rgb(232, 124, 3);
+    font-size:13px; 
   }
 `;
 export const LoginButton = styled.button`
@@ -222,7 +236,7 @@ export const FooterContainer = styled.div`
   margin-top: 45px;
   background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
-  height: 413px;
+  height: 413px; 
 `;
 export const FooterServeContainer = styled.div`
   position:relative;
@@ -256,13 +270,13 @@ export const FirstItem = styled.div`
 `
 export const SecondItem = styled.div`
   // background-color: red;
-  width: 900px;
-  height:100px;
+  width: 1200px;
+  height:90px;
   a{
     display: inline-block;
-    width:25%;
+    width:20%;
     margin-bottom: 16px;
-    padding: 0 22px 0 0;
+    padding: 0 10px 0 0;
     font-size:13px;
     color: #757575;
     cursor:pointer;
@@ -270,4 +284,29 @@ export const SecondItem = styled.div`
       text-decoration : underline
     }
   }
+`
+export const ThirdItem = styled.div`
+  width:1000px;
+  height: 50px;
+  // background-color: red;
+  border: ;
+  select{
+    border-radius: 4px;
+    width: 120px;
+    height:50px;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #333;
+    color:#737373;
+  }
+`
+export const fourthItem = styled.div`
+margin-top: 20px;
+
+.copy-text-block{
+  color:grey;
+  font-size: .75em;
+  line-height: 1.3em;
+  text-decoration:none;
+}
 `
