@@ -6,7 +6,7 @@ const user = {
   email: 'test@gmail.com',
   pw: 'test1234!!!',
 };
-
+const checkPw = true;
 function App() {
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
@@ -14,6 +14,7 @@ function App() {
   const [emailValid, setEmailValid] = useState(false);
   const [pwValid, setPwValid] = useState(false);
   const [notAllow, setNotAllow] = useState(true);
+  const [changePw, setChangePw] = useState('password');
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -32,6 +33,14 @@ function App() {
     if (email === user.email && pw === user.pw) alert('로그인 되었습니다');
     else alert('등록되지 않는 회원입니다');
   };
+  const checkPassword = (e) =>{
+    if(changePw === 'password')
+    {
+      setChangePw('text');
+    }
+    else 
+    setChangePw('password');
+  }
 
   useEffect(() => {
     if (emailValid && pwValid) {
@@ -71,8 +80,8 @@ function App() {
                 <div class="errorEmail">{!emailValid && email.length > 0 && <div>정확한 이메일 주소나 전화번호를 입력하세요.</div>}</div>
               </S.EmailInputContainer>
               <S.PasswordInputContainer>
-                <input value={pw} placeholder="비밀번호" type="password" onChange={handlePw} />
-                <p>표시</p>
+                <input value={pw} placeholder="비밀번호" type={changePw} onChange={handlePw} />
+                <p onClick={checkPassword}>표시</p>
                 <div>{!pwValid && pw.length > 0 && <div class="errorPw">비밀번호는 4~60자 사이여야 합니다.</div>}</div>
               </S.PasswordInputContainer>
               <S.LoginButton onClick={onClickConfirmButton} disabled={notAllow}>

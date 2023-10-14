@@ -123,6 +123,7 @@ export const PasswordInputContainer = styled.div`
     position: absolute;
     font-size: 14px;
     left: 275px;
+    cursor:pointer;
   }
   .errorPw{
     position:absolute;
