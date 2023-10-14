@@ -84,7 +84,7 @@ export const EmailInputContainer = styled.div`
     outline: none;
     color: #fff;
   }
-  div{
+  .errorEmail{
     position:absolute;
     left:3px;
     top: 55px;
@@ -124,7 +124,7 @@ export const PasswordInputContainer = styled.div`
     font-size: 14px;
     left: 275px;
   }
-  div{
+  .errorPw{
     position:absolute;
     left:3px;
     top: 55px;
@@ -144,6 +144,7 @@ export const LoginButton = styled.button`
   top: 335px;
   left: 68px;
   width: 315px;
+  cursor: pointer;
 `;
 export const LoginCheckBoxContainer = styled.div`
 position:absolute;

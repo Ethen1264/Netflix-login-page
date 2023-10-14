@@ -1,11 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import GlobalStyle from './GlobalStyle';
 import * as S from './Style';
+
+const user = {
+  email: 'test@gmail.com',
+  pw: 'test1234!!!',
+};
+
 function App() {
-  const [state, setState] = useState(0);
-  const buttonClick = () => {
-    setState(state + 1);
+  const [email, setEmail] = useState('');
+  const [pw, setPw] = useState('');
+
+  const [emailValid, setEmailValid] = useState(false);
+  const [pwValid, setPwValid] = useState(false);
+  const [notAllow, setNotAllow] = useState(true);
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    const regex = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    if (regex.test(email)) {
+      setEmailValid(true);
+    } else setEmailValid(false);
   };
+  const handlePw = (e) => {
+    setPw(e.target.value);
+    const regex = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
+    if (regex.test(pw)) setPwValid(true);
+    else setPwValid(false);
+  };
+  const onClickConfirmButton = (e) => {
+    if (email === user.email && pw === user.pw) alert('로그인 되었습니다');
+    else alert('등록되지 않는 회원입니다');
+  };
+
+  useEffect(() => {
+    if (emailValid && pwValid) {
+      setNotAllow(false);
+      return;
+    }
+    setNotAllow(true);
+  }, [emailValid, pwValid]);
   return (
     <>
       {/* web css 초기화 */}
@@ -33,15 +67,17 @@ function App() {
             <S.BackgorundLogin>
               <h1>로그인</h1>
               <S.EmailInputContainer>
-                <input placeholder="이메일 주소 또는 전화번호"></input>
-                <div>정확한 이메일 주소나 전화번호를 입력하세요.</div>
+                <input type="text" value={email} placeholder="이메일 주소 또는 전화번호" onChange={handleEmail}></input>
+                <div class="errorEmail">{!emailValid && email.length > 0 && <div>정확한 이메일 주소나 전화번호를 입력하세요.</div>}</div>
               </S.EmailInputContainer>
               <S.PasswordInputContainer>
-                <input placeholder="비밀번호" type="password" />
+                <input value={pw} placeholder="비밀번호" type="password" onChange={handlePw} />
                 <p>표시</p>
-                <div>비밀번호는 4~60자 사이여야 합니다.</div>
+                <div>{!pwValid && pw.length > 0 && <div class="errorPw">비밀번호는 4~60자 사이여야 합니다.</div>}</div>
               </S.PasswordInputContainer>
-              <S.LoginButton>로그인</S.LoginButton>
+              <S.LoginButton onClick={onClickConfirmButton} disabled={notAllow}>
+                로그인
+              </S.LoginButton>
               <S.LoginCheckBoxContainer>
                 <input type="checkbox" />
                 <span>로그인 정보 저장</span>
@@ -84,7 +120,7 @@ function App() {
                 </select>
               </S.ThirdItem>
               <S.fourthItem>
-              <div class="copy-text-block">넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div>
+                <div class="copy-text-block">넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div>
                 <div class="copy-text-block">대표: 레지널드 숀 톰프슨</div>
                 <div class="copy-text-block">이메일 주소: korea@netflix.com</div>
                 <div class="copy-text-block">주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div>
@@ -92,7 +128,9 @@ function App() {
                 <div class="copy-text-block">사업자등록번호: 165-87-00119</div>
                 <div class="copy-text-block">클라우드 호스팅: Amazon Web Services Inc.</div>
                 <div class="copy-text-block">
-                  <a class="copy-text-block" href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">공정거래위원회 웹사이트</a>
+                  <a class="copy-text-block" href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1658700119">
+                    공정거래위원회 웹사이트
+                  </a>
                 </div>
               </S.fourthItem>
             </S.FooterServeContainer>
