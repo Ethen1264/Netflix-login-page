@@ -6,7 +6,6 @@ const user = {
   email: 'test@gmail.com',
   pw: 'test1234!!!',
 };
-const checkPw = true;
 function App() {
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
